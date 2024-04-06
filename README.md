@@ -38,7 +38,7 @@ I used Selenium in Python and Pandas. Selenium was used to scrape the Results - 
 ## [Main plot and conclusion statement](#table-of-contents)
 
 <figure>
-    <center><img src="/figures/Plot-Consolidated-2019-to-2023.154419.jpg", width="900", height="900"></center>
+    <center><img src="/figures/Plot-Consolidated-2019-to-2023.200531.jpg", width="900", height="900"></center>
     <center><figcaption>Summation of results per year</figcaption></center>
 </figure>
 
@@ -51,34 +51,34 @@ With this plot, we can see that the whole team is mostly and more likely to gues
 #### [Other plots example from different plot types](#table-of-contents)
 
 <figure>
-    <center><img src="/figures/Plot-Months-2018.155440.jpg", width="900", height="900"></center>
+    <center><img src="/figures/Plot-Months-2018.200517.jpg", width="900", height="900"></center>
     <center><figcaption>Summation of results per month. Year: 2018</figcaption></center>
 </figure>
 
 <figure>
-    <center><img src="/figures/Plot-Months-2023.155445.jpg", width="900", height="900"></center>
+    <center><img src="/figures/Plot-Months-2023.200522.jpg", width="900", height="900"></center>
     <center><figcaption>Summation of results per month. Year: 2023</figcaption></center>
 </figure>
 
 <figure>
-    <center><img src="/figures/Plot-Months-2024.155446.jpg", width="900", height="900"></center>
+    <center><img src="/figures/Plot-Months-2024.200523.jpg", width="900", height="900"></center>
     <center><figcaption>Summation of results per month. Year: 2024</figcaption></center>
 </figure>
 
 This plots are from a function that sums the results per month in each year. There are other plot that I didn't include here since its going to take a lot of space. The statement I made earlier still holds true, as we can see here. While the month of April from 2018 has a lot of success in their thrid try, it is because its their launch month. And the "Snack Time Game" segment between the two round still hasn't been implemented in that Month. Instead, they have three rounds of song lyrics guessing game.
 
 <figure>
-    <center><img src="/figures/Plot-Years-August.155956.jpg", width="900", height="900"></center>
+    <center><img src="/figures/Plot-Years-August.200528.jpg", width="900", height="900"></center>
     <center><figcaption>Summation of results each year. Month: August</figcaption></center>
 </figure>
 
 <figure>
-    <center><img src="/figures/Plot-Years-February.155952.jpg", width="900", height="900"></center>
+    <center><img src="/figures/Plot-Years-February.200524.jpg", width="900", height="900"></center>
     <center><figcaption>Summation of results each year. Month: February</figcaption></center>
 </figure>
 
 <figure>
-    <center><img src="/figures/Plot-Years-May.155954.jpg", width="900", height="900"></center>
+    <center><img src="/figures/Plot-Years-May.200526.jpg", width="900", height="900"></center>
     <center><figcaption>Summation of results each year. Month: May</figcaption></center>
 </figure>
 

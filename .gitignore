@@ -3,3 +3,4 @@ src/__pycache__/custom_plot_settings.cpython-311.pyc
 src/__pycache__/data_cleaning_merging.cpython-311.pyc
 src/__pycache__/data_gathering.cpython-311.pyc
 src/__pycache__/data_visualizations.cpython-311.pyc
+.vscode/settings.json

@@ -28,13 +28,8 @@ def plot_months_per_year(dataframe: pd.DataFrame) -> None:
         dataframe (pd.DataFrame): Data feed here must be the cleaned and merged data.
     """
     
-    # ----------------------------------------------------------------------------------------------------
-    # > Applying the custom colors same as the one in the wikipedia page of the Show. The function also
-    # applies the rcParams for general settings.
-    # > Getting the unique "Year" values (No repetition) to be loop and used as a filtering method to the 
-    # dataframe.
-    # ----------------------------------------------------------------------------------------------------
-    custom_colors = custom_plot_settings()
+    # Current datetime to be used for naming the saved plots.
+    current_datetime = datetime_formatter()
     year_list = list(dataframe["Year"].unique())
     
     for per_year in year_list:
@@ -63,15 +58,25 @@ def plot_months_per_year(dataframe: pd.DataFrame) -> None:
             
             handler = pd.concat([handler, per_month_result], axis=0)
         # ----------------------------------------------------------------------------------------------------
+        # > Applying the custom colors same as the one in the wikipedia page of the Show. The function also
+        # applies the rcParams for general settings.
         # > Reording the columns of the filtered -> grouped dataframe.
         # > Filling the NaN with "0" so that I could convert the Dtype to "int". This will prevent the values
         # to have decimals.
         # ----------------------------------------------------------------------------------------------------
-        results_inorder = ["1st Try Success", "2nd Try Success", "3rd Try Success", "Failed"]
-        # results_inorder = ["1st Round Success", "2nd Round Success", "3rd Round Success", "Failed"]
-        df_results_per_month = handler[results_inorder].copy()
+        result_names = ["1st Try Success", "2nd Try Success", "3rd Try Success", "Failed"]
+        current_result_names = [] # Holds the Results in proper order already.
+        handler_columns = list(handler.columns)
+
+        for result_name in result_names:
+            if result_name in handler_columns:
+                current_result_names.append(result_name)
+        
+        custom_colors = custom_plot_settings(current_result_names)
+        
+        df_results_per_month = handler[current_result_names].copy()
         df_results_per_month.fillna(0, inplace=True)
-        df_results_per_month[results_inorder] = df_results_per_month[results_inorder].astype("int")
+        df_results_per_month[current_result_names] = df_results_per_month[current_result_names].astype("int")
         # ----------------------------------------------------------------------------------------------------
         # Data plotting and settings.
         # ----------------------------------------------------------------------------------------------------
@@ -111,7 +116,7 @@ def plot_years_per_month(dataframe: pd.DataFrame) -> None:
     # > Getting the unique "Month" values (No repetition) to be loop and used as a filtering method to the 
     # dataframe.
     # ----------------------------------------------------------------------------------------------------
-    custom_colors = custom_plot_settings()
+    # custom_colors = custom_plot_settings()
     month_list = ["January", "February", "March", "April", "May", "June", "July",
                 "August", "September", "October", "November", "December"]
 
@@ -140,13 +145,14 @@ def plot_years_per_month(dataframe: pd.DataFrame) -> None:
         # columns available to the current iterated month.
         # ----------------------------------------------------------------------------------------------------
         result_names = ["1st Try Success", "2nd Try Success", "3rd Try Success", "Failed"]
-        # result_names = ["1st Round Success", "2nd Round Success", "3rd Round Success", "Failed"]
         current_result_names = [] # Holds the Results in proper order already.
         handler_columns = list(handler.columns)
 
         for result_name in result_names:
             if result_name in handler_columns:
                 current_result_names.append(result_name)
+        
+        custom_colors = custom_plot_settings(current_result_names)
         # ----------------------------------------------------------------------------------------------------
         # > Reording the columns of the filtered -> grouped dataframe.
         # > Filling the NaN with "0" so that I could convert the Dtype to "int". This will prevent the values
@@ -188,12 +194,7 @@ def plot_comparison_per_consolidated_year(dataframe: pd.DataFrame) -> None:
         dataframe (pd.DataFrame): Data feed here must be the cleaned and merged data.
     """
     
-    # ----------------------------------------------------------------------------------------------------
-    # > Applying the custom colors same as the one in the wikipedia page of the Show. The function also
-    # applies the rcParams for general settings.
-    # > Current datetime to be used for naming the saved plots.
-    # ----------------------------------------------------------------------------------------------------
-    custom_colors = custom_plot_settings()
+    # Current datetime to be used for naming the saved plots.
     current_datetime = datetime_formatter()
     # ----------------------------------------------------------------------------------------------------
     # This part of the code checks if the current iteration of the year has 12 months of data in it. If it
@@ -224,15 +225,25 @@ def plot_comparison_per_consolidated_year(dataframe: pd.DataFrame) -> None:
         
         handler = pd.concat([handler, per_year_result], axis=0)
     # ----------------------------------------------------------------------------------------------------
+    # > Applying the custom colors same as the one in the wikipedia page of the Show. The function also
+    # applies the rcParams for general settings.
     # > Reording the columns of the filtered -> grouped dataframe.
     # > Filling the NaN with "0" so that I could convert the Dtype to "int". This will prevent the values
     # to have decimals.
     # ----------------------------------------------------------------------------------------------------
-    results_inorder = ["1st Try Success", "2nd Try Success", "3rd Try Success", "Failed"]
-    # results_inorder = ["1st Round Success", "2nd Round Success", "3rd Round Success", "Failed"]
-    df_results_per_year = handler[results_inorder].copy()
+    result_names = ["1st Try Success", "2nd Try Success", "3rd Try Success", "Failed"]
+    current_result_names = [] # Holds the Results in proper order already.
+    handler_columns = list(handler.columns)
+
+    for result_name in result_names:
+        if result_name in handler_columns:
+            current_result_names.append(result_name)
+    
+    custom_colors = custom_plot_settings(current_result_names)
+    
+    df_results_per_year = handler[current_result_names].copy()
     df_results_per_year.fillna(0, inplace=True)
-    df_results_per_year[results_inorder] = df_results_per_year[results_inorder].astype("int")
+    df_results_per_year[current_result_names] = df_results_per_year[current_result_names].astype("int")
     # ----------------------------------------------------------------------------------------------------
     # Data plotting and settings.
     # ----------------------------------------------------------------------------------------------------
