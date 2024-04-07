@@ -23,7 +23,7 @@ It is a Korean TV Show, wherein fix casts will be playing as a whole team to gue
 
 This personal project of mine serves as an experience in data scraping and data analysis. I scraped this Wikipedia [webpage](https://en.wikipedia.org/wiki/List_of_DoReMi_Market_episodes), which contains the results for each round in each episode and also the data that I need for this project to make the data plots and data analysis.
 
-This project only uses four external packages: Selenium, Webdriver-Manager, Pandas, and Matplotlib. Selenium, Webdriver-Manager, and Pandas are used to scrape data from the Wikipedia page. Pandas, again, are used to manage, manipulate, and clean the data from the dataframe. While the Matplotlib is used to make plots based on the cleaned and merged data that Selenium and Pandas scraped.
+This project uses four external packages: Selenium, Webdriver-Manager, Pandas, and Matplotlib. Selenium, Webdriver-Manager, and Pandas are used to scrape data from the Wikipedia page. Pandas, again, are used to manage, manipulate, and clean the data from the dataframe. While the Matplotlib is used to make plots based on the cleaned and merged data that Selenium and Pandas scraped.
 
 As of March 6, 2024, there's currently 308 episodes. So the data that I have in here is for episodes 1 to 308.
 
@@ -44,7 +44,7 @@ I used Selenium in Python and Pandas. Selenium was used to scrape the Results - 
 
 The reason why this plot doesn't have the results for years 2018 and 2024 is because those years don't have data for the whole year - 12 months. I code the function that plots this to consider only those years with a whole year of data so that all data interpretation will be based on data with a whole year of data only.
 
-With this plot, we can see that the whole team is mostly and more likely to guess the correct lyrics by their second try. Their success on their first try is also not that bad. As for their third try and failing the round, we can say that they are more likely to fail if they are already in their third try than actually successfully guessing the lyrics. These will further be strengthen with the other plots from the other functions that I made.
+**With this plot, we can see that the whole team is mostly and more likely to guess the correct lyrics by their second try.** Their success on their first try is also not that bad. As for their third try and failing the round, **we can say that they are more likely to fail if they are already in their third try than actually successfully guessing the lyrics.** These will further be strengthen with the other plots from the other functions that I made.
 
 <a id="heading-5"></a>
 
@@ -65,7 +65,9 @@ With this plot, we can see that the whole team is mostly and more likely to gues
     <center><figcaption>Summation of results per month. Year: 2024</figcaption></center>
 </figure>
 
-This plots are from a function that sums the results per month in each year. There are other plot that I didn't include here since its going to take a lot of space. The statement I made earlier still holds true, as we can see here. While the month of April from 2018 has a lot of success in their thrid try, it is because its their launch month. And the "Snack Time Game" segment between the two round still hasn't been implemented in that Month. Instead, they have three rounds of song lyrics guessing game.
+As we can see with these plots, the statement I made earlier still holds true. While the month of April from 2018 has a lot of success in their thrid try, it is because it's their launch month. And the "Snack Time Game" segment between the two round still hasn't been implemented in that Month. Instead, they have three rounds of song lyrics guessing game.This plots are from a function that sums the results per month in each year.
+
+I didn't include all the plots here since its going to take a lot of space. 
 
 <figure>
     <center><img src="/figures/Plot-Years-August.200528.jpg", width="900", height="900"></center>
@@ -82,7 +84,9 @@ This plots are from a function that sums the results per month in each year. The
     <center><figcaption>Summation of results each year. Month: May</figcaption></center>
 </figure>
 
-This is the final function. This function plots each month with data from different years. In these plots, we can see how the whole team performed through the years in the same month. As for the other plots,they are located in the "figures" folder of this project.
+In these plots, we can see how the whole team performed through the years in the same month.
+This is the final function. This function plots each month with data from different years.
+As for the other plots,they are located in the "figures" folder of this project.
 
 <a id="heading-6"></a>
 
