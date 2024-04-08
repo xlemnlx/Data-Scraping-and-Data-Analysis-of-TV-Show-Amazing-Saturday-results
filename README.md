@@ -38,13 +38,18 @@ I used Selenium in Python and Pandas. Selenium was used to scrape the Results - 
 ## [Main plot and conclusion statement](#table-of-contents)
 
 <figure>
+    <center><img src="/figures/Plot-Result-Percentage-2018-to-2024.101027.jpg", width="900", height="900"></center>
+    <center><figcaption>Summation of results per year</figcaption></center>
+</figure>
+
+<figure>
     <center><img src="/figures/Plot-Consolidated-2019-to-2023.200531.jpg", width="900", height="900"></center>
     <center><figcaption>Summation of results per year</figcaption></center>
 </figure>
 
-The reason why this plot doesn't have the results for years 2018 and 2024 is because those years don't have data for the whole year - 12 months. I code the function that plots this to consider only those years with a whole year of data so that all data interpretation will be based on data with a whole year of data only.
-
 **With this plot, we can see that the whole team is mostly and more likely to guess the correct lyrics by their second try.** Their success on their first try is also not that bad. As for their third try and failing the round, **we can say that they are more likely to fail if they are already in their third try than actually successfully guessing the lyrics.** These will further be strengthen with the other plots from the other functions that I made.
+
+The reason why the second plot doesn't have the results for years 2018 and 2024 is because those years don't have data for the whole year - 12 months. I code the function that plots this to consider only those years with a whole year of data so that all data interpretation will be based on data with a whole year of data only.
 
 <a id="heading-5"></a>
 
@@ -65,9 +70,7 @@ The reason why this plot doesn't have the results for years 2018 and 2024 is bec
     <center><figcaption>Summation of results per month. Year: 2024</figcaption></center>
 </figure>
 
-As we can see with these plots, the statement I made earlier still holds true. While the month of April from 2018 has a lot of success in their thrid try, it is because it's their launch month. And the "Snack Time Game" segment between the two round still hasn't been implemented in that Month. Instead, they have three rounds of song lyrics guessing game.This plots are from a function that sums the results per month in each year.
-
-I didn't include all the plots here since its going to take a lot of space. 
+As we can see from these plots, the statement I made earlier still holds true. While the month of April from 2018 has had a lot of success in their third try, it's because it's their launch month. And the "Snack Time Game" segment between the two rounds hasn't been implemented yet in that month. Instead, they have three rounds of a song lyrics guessing game. These plots are from a function that sums the results per month in each year.
 
 <figure>
     <center><img src="/figures/Plot-Years-August.200528.jpg", width="900", height="900"></center>
@@ -85,7 +88,7 @@ I didn't include all the plots here since its going to take a lot of space.
 </figure>
 
 In these plots, we can see how the whole team performed through the years in the same month.
-This is the final function. This function plots each month with data from different years.
+
 As for the other plots,they are located in the "figures" folder of this project.
 
 <a id="heading-6"></a>
